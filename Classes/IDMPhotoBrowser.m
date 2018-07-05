@@ -1365,11 +1365,11 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
             __typeof__(self) __weak selfBlock = self;
 
 			[self.activityViewController setCompletionWithItemsHandler:^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
-				[selfBlock hideControlsAfterDelay];
-				selfBlock.activityViewController = nil;
                 if (selfBlock.activityCompletionWithItemsHandler) {
                     selfBlock.activityCompletionWithItemsHandler(activityType,completed,returnedItems,activityError);
                 }
+				[selfBlock hideControlsAfterDelay];
+				selfBlock.activityViewController = nil;
 			}];
 
 			if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
