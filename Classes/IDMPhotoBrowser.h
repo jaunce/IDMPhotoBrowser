@@ -72,6 +72,8 @@
 // Animation time (default .28)
 @property (nonatomic) float animationDuration;
 
+@property(nullable, nonatomic, copy) UIActivityViewControllerCompletionWithItemsHandler activityCompletionWithItemsHandler;
+
 // Init
 - (id)initWithPhotos:(NSArray *)photosArray;
 

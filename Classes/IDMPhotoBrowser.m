@@ -1367,6 +1367,9 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 			[self.activityViewController setCompletionWithItemsHandler:^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
 				[selfBlock hideControlsAfterDelay];
 				selfBlock.activityViewController = nil;
+                if (selfBlock.activityCompletionWithItemsHandler) {
+                    selfBlock.activityCompletionWithItemsHandler(activityType,completed,returnedItems,activityError);
+                }
 			}];
 
 			if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
