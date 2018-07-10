@@ -325,17 +325,17 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
             else // swipe up
                 finalY = -viewHalfHeight;
 
-            CGFloat animationDuration = 0.35;
+//            CGFloat animationDuration = 0.35;
+//
+//            [UIView beginAnimations:nil context:NULL];
+//            [UIView setAnimationDuration:animationDuration];
+//            [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+//            [UIView setAnimationDelegate:self];
+//            [scrollView setCenter:CGPointMake(finalX, finalY)];
+//            self.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
+//            [UIView commitAnimations];
 
-            [UIView beginAnimations:nil context:NULL];
-            [UIView setAnimationDuration:animationDuration];
-            [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-            [UIView setAnimationDelegate:self];
-            [scrollView setCenter:CGPointMake(finalX, finalY)];
-            self.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-            [UIView commitAnimations];
-
-            [self performSelector:@selector(doneButtonPressed:) withObject:self afterDelay:animationDuration];
+            [self doneButtonPressed:nil];
         }
         else // Continue Showing View
         {
