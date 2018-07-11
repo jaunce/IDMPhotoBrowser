@@ -334,6 +334,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 //            [scrollView setCenter:CGPointMake(finalX, finalY)];
 //            self.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
 //            [UIView commitAnimations];
+            self.view.hidden = YES;
 
             [self doneButtonPressed:nil];
         }
